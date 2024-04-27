@@ -53,10 +53,7 @@ jobs:
     name: Semantic Versioning
     runs-on: ubuntu-latest
     needs:
-      - debug
-      - backend
       - frontend
-      - commons
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
