@@ -18,6 +18,12 @@ public class RelationTypeService : IRelationTypeService
             Name = "Extends",
             Description = "The item at the right side extends the item at the left side."
         },
+        new RelationTypeResult
+        {
+            Id = 3,
+            Name = "RelatesTo",
+            Description = "Describes a connection between two related document."
+        }
     };
 
     public async Task<ICollection<RelationTypeResult>> GetAllAsync()

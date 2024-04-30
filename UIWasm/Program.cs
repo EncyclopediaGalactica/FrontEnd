@@ -1,9 +1,13 @@
+#region
+
 using Fluxor;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.FluentUI.AspNetCore.Components;
 using UIWasm;
 using UIWasm.Services;
+
+#endregion
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -23,6 +27,7 @@ builder.Services
     .AddScoped<IDocumentService, DocumentService>()
     .AddScoped<IDocumentTypeService, DocumentTypeService>()
     .AddScoped<IFileFormatService, FileFormatService>()
+    .AddScoped<IRelationService, RelationService>()
     ;
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });

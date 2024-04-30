@@ -2,7 +2,7 @@ using EncyclopediaGalactica.BusinessLogic.Contracts;
 using Microsoft.AspNetCore.Components;
 using Microsoft.FluentUI.AspNetCore.Components;
 
-namespace UIWasm.Components.Modules.Documents.Application;
+namespace UIWasm.Components.Modules.Documents.ApplicationGrid;
 
 public partial class EGAddApplicationDialog
 {
