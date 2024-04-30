@@ -1,7 +1,7 @@
 using EncyclopediaGalactica.BusinessLogic.Contracts;
 using Microsoft.AspNetCore.Components;
 using Microsoft.FluentUI.AspNetCore.Components;
-using UIWasm.Components.Modules.Documents.Application;
+using UIWasm.Components.Modules.Documents.ApplicationGrid;
 
 namespace UIWasm.Components.Modules.Documents.DocumentTypeGrid;
 

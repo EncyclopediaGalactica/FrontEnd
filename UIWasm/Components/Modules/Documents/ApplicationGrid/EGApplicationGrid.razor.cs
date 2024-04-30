@@ -1,10 +1,9 @@
 using EncyclopediaGalactica.BusinessLogic.Contracts;
 using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.FluentUI.AspNetCore.Components;
 using UIWasm.Services;
 
-namespace UIWasm.Components.Modules.Documents.Application;
+namespace UIWasm.Components.Modules.Documents.ApplicationGrid;
 
 public partial class EGApplicationGrid
 {
@@ -34,7 +33,7 @@ public partial class EGApplicationGrid
 
     private async Task HandleAddClick()
     {
-        DialogService.ShowDialogAsync<EGAddApplicationDialog>(
+        DialogService.ShowDialogAsync<ApplicationGrid.EGAddApplicationDialog>(
             new ApplicationResult(),
             new DialogParameters
             {
