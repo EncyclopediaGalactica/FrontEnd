@@ -17,6 +17,13 @@ public class ScreenService : IScreenService
         new ScreenResult { Id = 150, Name = "Relations", UnifiedName = "relations", ModuleId = 1 },
         new ScreenResult { Id = 101, Name = "Relation Types", UnifiedName = "relation_types", ModuleId = 1 },
         new ScreenResult { Id = 110, Name = "Applications", UnifiedName = "applications", ModuleId = 1 },
+        new ScreenResult
+        {
+            Id = 150,
+            Name = "Tree Editor",
+            UnifiedName = "document_structure_tree_editor",
+            ModuleId = 1
+        },
 
         new ScreenResult { Id = 102, Name = "Incomes", UnifiedName = "incomes", ModuleId = 2 },
         new ScreenResult { Id = 103, Name = "Expenses", UnifiedName = "expenses", ModuleId = 2 },
