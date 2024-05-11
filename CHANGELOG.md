@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/EncyclopediaGalactica/FrontEnd/compare/0.2.0...0.3.0) (2024-05-11)
+
+
+### Features
+
+* Document structure editor basics [#3](https://github.com/EncyclopediaGalactica/FrontEnd/issues/3) ([1a89124](https://github.com/EncyclopediaGalactica/FrontEnd/commit/1a8912489fa2a991470465d4caf4efd230361da3))
+
 # [0.2.0](https://github.com/EncyclopediaGalactica/FrontEnd/compare/0.1.0...0.2.0) (2024-04-30)
 
 
