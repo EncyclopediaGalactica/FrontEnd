@@ -1,4 +1,8 @@
+#region
+
 using EncyclopediaGalactica.BusinessLogic.Contracts;
+
+#endregion
 
 namespace UIWasm.Services;
 
@@ -29,5 +33,30 @@ public class DocumentService : IDocumentService
     public async Task<ICollection<DocumentResult>> GetAllAsync()
     {
         return _storage;
+    }
+
+    public async Task<DocumentResult> GetById(long id, CancellationToken cancellationToken = default)
+    {
+        return new DocumentResult
+        {
+            Id = 1,
+            Name = "Karman Todor Wikipedia page",
+            Description = "Karman Todor Wikipedia page",
+            DocumentStructure = new DocumentStructureResult
+            {
+                Id = 1,
+                Name = "HTML5 Page Structure",
+                Description = "A HTML5 Page structure.",
+                StructureNode = new DocumentStructureNodeResult
+                {
+                    Id = 1,
+                    DocumentId = 1,
+                    Name = "HTML5 page root node",
+                    Description = "HTML5 page root node to describe the whole",
+                    ParentId = 0,
+                    HasChildren = true
+                }
+            },
+        };
     }
 }

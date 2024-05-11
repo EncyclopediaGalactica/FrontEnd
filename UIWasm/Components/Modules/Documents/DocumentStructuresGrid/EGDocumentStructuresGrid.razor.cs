@@ -1,8 +1,12 @@
+#region
+
 using EncyclopediaGalactica.BusinessLogic.Contracts;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.FluentUI.AspNetCore.Components;
 using UIWasm.Services;
+
+#endregion
 
 namespace UIWasm.Components.Modules.Documents.DocumentStructuresGrid;
 
@@ -24,7 +28,8 @@ public partial class EGDocumentStructuresGrid
     {
         GridItemsProvider = async request =>
         {
-            ICollection<DocumentStructureResult> r = await DocumentStructureService.GetAllAsync().ConfigureAwait(false);
+            ICollection<DocumentStructureResult> r = await DocumentStructureService.GetAllAsync()
+                .ConfigureAwait(false);
             return GridItemsProviderResult.From<DocumentStructureResult>(
                 r,
                 r.Count);
@@ -59,7 +64,7 @@ public partial class EGDocumentStructuresGrid
     private async Task HandleOnClickPreviewAsync()
     {
         await DialogService.ShowDialogAsync<EGShowDocumentStructurePreviewDialog>(
-            new DocumentStructureResult(),
+            new DocumentStructureNodeResult(),
             new DialogParameters
             {
                 Height = "400px",

@@ -1,4 +1,8 @@
+#region
+
 using EncyclopediaGalactica.BusinessLogic.Contracts;
+
+#endregion
 
 namespace UIWasm.Services;
 
