@@ -29,7 +29,7 @@ public partial class EGDocumentStructureEditor
         Logger.LogInformation("documents size: {Size}", _documentResults.Count);
     }
 
-    private async Task SelectDocument(DocumentResult selectedDocument)
+    private async Task SelectDocumentAsync(DocumentResult selectedDocument)
     {
         _selectedDocument = await DocumentService.GetById(selectedDocument.Id).ConfigureAwait(false);
         // List<StructureNode> flatNodes = MapStructureNodeResultToStructureNode(_selectedDocument.StructureNodes);

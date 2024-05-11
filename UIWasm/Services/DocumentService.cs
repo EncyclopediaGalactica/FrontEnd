@@ -42,22 +42,21 @@ public class DocumentService : IDocumentService
             Id = 1,
             Name = "Karman Todor Wikipedia page",
             Description = "Karman Todor Wikipedia page",
-            StructureNodes = new List<StructureNodeResult>
+            DocumentStructure = new DocumentStructureResult
             {
-                new StructureNodeResult { Id = 1, DocumentId = 1, ParentId = 0 },
-                new StructureNodeResult { Id = 2, DocumentId = 1, ParentId = 1 },
-                new StructureNodeResult { Id = 3, DocumentId = 1, ParentId = 1 },
-                new StructureNodeResult { Id = 4, DocumentId = 1, ParentId = 1 },
-                new StructureNodeResult { Id = 5, DocumentId = 1, ParentId = 2 },
-                new StructureNodeResult { Id = 6, DocumentId = 1, ParentId = 2 },
-                new StructureNodeResult { Id = 7, DocumentId = 1, ParentId = 2 },
-                new StructureNodeResult { Id = 8, DocumentId = 1, ParentId = 3 },
-                new StructureNodeResult { Id = 9, DocumentId = 1, ParentId = 3 },
-                new StructureNodeResult { Id = 10, DocumentId = 1, ParentId = 3 },
-                new StructureNodeResult { Id = 11, DocumentId = 1, ParentId = 4 },
-                new StructureNodeResult { Id = 12, DocumentId = 1, ParentId = 4 },
-                new StructureNodeResult { Id = 13, DocumentId = 1, ParentId = 4 },
-            }
+                Id = 1,
+                Name = "HTML5 Page Structure",
+                Description = "A HTML5 Page structure.",
+                StructureNode = new DocumentStructureNodeResult
+                {
+                    Id = 1,
+                    DocumentId = 1,
+                    Name = "HTML5 page root node",
+                    Description = "HTML5 page root node to describe the whole",
+                    ParentId = 0,
+                    HasChildren = true
+                }
+            },
         };
     }
 }

@@ -1,3 +1,4 @@
+@using EncyclopediaGalactica.BusinessLogic.Contracts
 @if (StructureNode is not null)
 {
     <FluentTreeItem Text="@StructureNode.Id.ToString()">
@@ -12,11 +13,11 @@
             Delete
         </FluentButton>
 
-        @if (StructureNode.StructureNodes.Any())
+        @if (StructureNode.HasChildren && StructureNodes.Any())
         {
-            foreach (StructureNode node in StructureNode.StructureNodes)
+            foreach (DocumentStructureNodeResult child in StructureNodes)
             {
-                <EGDocumentStructureTree StructureNode="node"/>
+                <EGDocumentStructureTree StructureNode="child"/>
             }
         }
     </FluentTreeItem>

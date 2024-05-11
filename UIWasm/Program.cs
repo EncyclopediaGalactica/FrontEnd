@@ -28,6 +28,7 @@ builder.Services
     .AddScoped<IDocumentTypeService, DocumentTypeService>()
     .AddScoped<IFileFormatService, FileFormatService>()
     .AddScoped<IRelationService, RelationService>()
+    .AddScoped<IDocumentStructureNodeService, DocumentStructureNodeService>()
     ;
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
